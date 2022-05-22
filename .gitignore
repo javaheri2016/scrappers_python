@@ -1,0 +1,14 @@
+.idea/
+build/
+dist/
+downloads/
+lib/
+lib64/
+parts/
+sdist/
+var/
+.env
+.venv
+env/
+venv/
+ENV/
