@@ -12,3 +12,4 @@ var/
 env/
 venv/
 ENV/
+data.py
