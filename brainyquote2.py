@@ -6,9 +6,9 @@ quotes_url = "https://www.brainyquote.com/topics/page-quotes"
 response = requests.get(quotes_url)
 soup = BeautifulSoup(response.text, 'html.parser')
 
-i = 1
+n = 1
 quotes_list = []
-for i in range(17):
+for i in range(16):
     for quote in soup.find_all("div", class_="grid-item"):
         single_quote = dict()
 
@@ -24,11 +24,11 @@ for i in range(17):
 
         quotes_list.append(single_quote)
 
-    i = i + 1
-    pageno = "_" + str(i)
+    n = n + 1
+    pageno = "_" + str(n)
     next_page_url = quotes_url + pageno
     response = requests.get(next_page_url)
     soup = BeautifulSoup(response.text, 'html.parser')
 
-quotes_list
 print("How many items: " + str(len(quotes_list)))
+print(quotes_list)
